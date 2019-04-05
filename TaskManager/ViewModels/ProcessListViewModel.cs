@@ -98,24 +98,29 @@ namespace TaskManager.Osadchuk.ViewModels
                 case 5:
                     await Task.Run(() =>
                         newProcesses = 
-                            new ObservableCollection<ProcessModel>(collection.OrderBy(i => i.RAM)));
+                            new ObservableCollection<ProcessModel>(collection.OrderBy(i => i.RAMinPercents)));
                     break;
                 case 6:
                     await Task.Run(() =>
-                        newProcesses = 
-                            new ObservableCollection<ProcessModel>(collection.OrderBy(i => i.Streams)));
+                        newProcesses =
+                            new ObservableCollection<ProcessModel>(collection.OrderBy(i => i.RAMinKB)));
                     break;
                 case 7:
                     await Task.Run(() =>
                         newProcesses = 
-                            new ObservableCollection<ProcessModel>(collection.OrderBy(i => i.Handles)));
+                            new ObservableCollection<ProcessModel>(collection.OrderBy(i => i.Streams)));
                     break;
                 case 8:
                     await Task.Run(() =>
                         newProcesses = 
-                            new ObservableCollection<ProcessModel>(collection.OrderBy(i => i.Folder)));
+                            new ObservableCollection<ProcessModel>(collection.OrderBy(i => i.Handles)));
                     break;
                 case 9:
+                    await Task.Run(() =>
+                        newProcesses = 
+                            new ObservableCollection<ProcessModel>(collection.OrderBy(i => i.Folder)));
+                    break;
+                case 10:
                     await Task.Run(() =>
                         newProcesses =
                             new ObservableCollection<ProcessModel>(collection.OrderBy(i => i.StartTime)));

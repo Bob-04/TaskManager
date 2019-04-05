@@ -26,7 +26,8 @@
             <ComboBoxItem>ID</ComboBoxItem>
             <ComboBoxItem>Active</ComboBoxItem>
             <ComboBoxItem>CPU</ComboBoxItem>
-            <ComboBoxItem>RAM</ComboBoxItem>
+            <ComboBoxItem>RAM(%)</ComboBoxItem>
+            <ComboBoxItem>RAM(KB)</ComboBoxItem>
             <ComboBoxItem>Streams</ComboBoxItem>
             <ComboBoxItem>Handles</ComboBoxItem>
             <ComboBoxItem>Folder</ComboBoxItem>
@@ -45,10 +46,11 @@
                 <DataGridTextColumn Header="ID" Binding="{Binding Id, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Active" Binding="{Binding Active, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
                 <DataGridTextColumn Header="CPU(%)" Binding="{Binding CPU, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="100"></DataGridTextColumn>
-                <DataGridTextColumn Header="RAM(%)" Binding="{Binding RAM, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="RAM(%)" Binding="{Binding RAMinPercents, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="RAM(KB)" Binding="{Binding RAMinKB, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="70"></DataGridTextColumn>
                 <DataGridTextColumn Header="Streams" Binding="{Binding Streams, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Handles" Binding="{Binding Handles, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Folder" Binding="{Binding Folder, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="200"></DataGridTextColumn>
+                <DataGridTextColumn Header="Folder" Binding="{Binding Folder, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="150"></DataGridTextColumn>
                 <DataGridTextColumn Header="Date" Binding="{Binding StartTime, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>

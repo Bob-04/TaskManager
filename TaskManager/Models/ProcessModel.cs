@@ -14,7 +14,8 @@ namespace TaskManager.Osadchuk.Models
         public int Id { get; private set; }
         public bool Active { get; private set; }
         public double CPU { get; private set; }
-        public double RAM { get; private set; }
+        public double RAMinPercents { get; private set; }
+        public long RAMinKB { get; private set; }
         public int Streams { get; private set; }
         public int Handles { get; private set; }
         public string Folder { get; private set; }
@@ -72,7 +73,8 @@ namespace TaskManager.Osadchuk.Models
             catch (InvalidOperationException) { }
             try
             {
-                RAM = 100 * RAMcounter.NextValue() / Memory_Counter;
+                RAMinKB = (long)RAMcounter.NextValue() / 1024;
+                RAMinPercents = 100 * RAMcounter.NextValue() / Memory_Counter;
             }
             catch (InvalidOperationException) { }
             Streams = Process.Threads.Count;
